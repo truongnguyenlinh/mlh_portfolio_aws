@@ -6,8 +6,9 @@
   background-color: black;
 }
 
-p,h2,.text{
-font-family: 'Baloo Tammudu 2', cursive;
+p, h1, h2, h3, h4, h5, h6, .text{
+  font-family: 'Baloo Tammudu 2', cursive;
+  color: white;
 }
 
 body{
