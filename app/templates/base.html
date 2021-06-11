@@ -9,11 +9,7 @@
     <meta property="og:url" content="{{ url }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
-    <link lang='sass' rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}"/>
     <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/c_style.css') }}">
     <title>{{ title }}</title>
     <!--upper menu-->
@@ -24,7 +20,7 @@
         <div class="sep_line" id="up_men_line"></div>
         <p class="menu_buttons"> <a href="/about"> - About Me - </a></p>
         <div class="sep_line" id="up_men_line"></div>
-        <p class="menu_buttons"> <a href=""></a> - Contact - </p>
+        <p class="menu_buttons"> <a href="/contact"> - Contact - </a></p>
     </div>
     {% block head %} {% endblock %}
 </head>

@@ -1,0 +1,80 @@
+.fa-icon, .fa {
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    line-height: 32px;
+    font-size: 15px;
+    text-align: center
+}
+
+.title_sub{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 0.5%;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: right;
+    padding-right: 10.5%;
+    /*position: center;*/
+    /*border: 1px solid white;*/
+}
+
+.form-group {
+    width: 400px;
+    padding-bottom: 2%;
+}
+.form-control{
+    width: 100%;
+}
+#message{
+    resize: vertical;
+}
+
+.labelContainer {
+    display: flex;
+}
+
+
+.iconDiv {
+    /*padding-top: 9.5%;*/
+    padding-bottom: -11%;
+}
+
+
+.city{
+    font-family: 'Baloo Tammudu 2', cursive;
+    color: white;
+}
+
+.socials {
+    padding-left: 6.5%
+}
+
+.labelTextDiv {
+    padding-top: 2%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.send_email {
+    /*border: 1px solid white;*/
+    /*padding-right: -12%;*/
+    /*margin-right: 12%;*/
+    /*padding-left: 12%;*/
+    /*border: 1px solid white;*/
+}

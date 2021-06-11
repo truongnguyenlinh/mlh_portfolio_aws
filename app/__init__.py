@@ -18,5 +18,9 @@ def create_app():
     @app.route("/about")
     def about_me():
         return render_template("about_me.html", title="about_me", url=os.getenv("URL"))
+
+    @app.route("/contact")
+    def contact():
+        return render_template("contact.html", title="Contact", url=os.getenv("URL"))
     
     return app
