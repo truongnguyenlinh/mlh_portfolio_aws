@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block body %}
+<section class="bdy">
     <div class="h1Container">
         <div>
              <h1> Hi, I'm
@@ -15,5 +16,9 @@
             </h1>
         </div>
     </div>
+    <div class="img">
+        <img id="works_img" src="./static/img/lihn_image.jpg"/>
+    </div>
+</section>
     <script src="{{url_for('static', filename='scripts/typing.js')}}"></script>
 {% endblock %}

@@ -1,3 +1,9 @@
+.bdy{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 button {
     font-family: "Roboto", serif;
 }
@@ -81,8 +87,25 @@ button {
 }
 
 .h1Container {
+    position: relative;
+    width: 50%;
+    font-size: 30px;
     display:flex;
     align-items: center;
     height: 100%;
-    padding-left: 4%;
+    padding-left: 8%;
+    margin-top: 19%;
+}
+
+.img{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#works_img{
+    height: 60%;
+    width: auto;
+    padding: 2%;
+    border: solid 3px white;
 }
