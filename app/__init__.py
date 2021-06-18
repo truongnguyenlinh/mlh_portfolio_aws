@@ -23,4 +23,8 @@ def create_app():
     def contact():
         return render_template("contact.html", title="Contact", url=os.getenv("URL"))
     
+    @app.route("/health")
+    def healthy():
+        return ''
+
     return app
