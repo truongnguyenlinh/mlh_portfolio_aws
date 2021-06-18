@@ -32,7 +32,6 @@ body{
 .menu_buttons{
   cursor: pointer;
   font-size: 20px;
-  color: white;
 }
 
 .menu_buttons:hover{
@@ -46,6 +45,6 @@ body{
 }
 
 :any-link{
-  color: white;
+  color: gold;
   text-decoration: none;
 }
