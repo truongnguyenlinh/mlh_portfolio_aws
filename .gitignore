@@ -8,4 +8,3 @@ venv/
 .vscode
 python3-virtualenv
 flask.sqlite
-migrations
