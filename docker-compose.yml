@@ -9,3 +9,13 @@ services:
       - .flaskenv
     volumes:
       - ./flask.sqlite:/mlh_portfolio_aws/flask.sqlite
+    volumes:
+      - .:/mlh_portfolio_aws
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .flaskenv
