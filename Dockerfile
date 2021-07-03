@@ -7,5 +7,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . /mlh_portfolio_aws
 
-RUN chmod u+x ./entrypoint.sh 
+RUN chmod u+x ./entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
