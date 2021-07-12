@@ -1,13 +1,14 @@
 import os
-from flask import Flask, request, render_template, request
-from werkzeug.security import generate_password_hash, check_password_hash, generate_password_hash
+from flask import Flask, request, render_template
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 
 # Flask uses load_dotenv by default
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
+app.config['SQLALCHEMY_DATABASE_URI'] = \
+     'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
     user=os.getenv('POSTGRES_USER'),
     passwd=os.getenv('POSTGRES_PASSWORD'),
     host=os.getenv('POSTGRES_HOST'),
@@ -33,25 +34,31 @@ class UserModel(db.Model):
     def __repr__(self):
         return f"<User {self.username}>"
 
+
 @app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+
 
 @app.route("/projects")
 def carousel():
     return render_template("carousel.html", title="works", url=os.getenv("URL"))
 
+
 @app.route("/about")
 def about_me():
     return render_template("about_me.html", title="about_me", url=os.getenv("URL"))
+
 
 @app.route("/contact")
 def contact():
     return render_template("contact.html", title="Contact", url=os.getenv("URL"))
 
+
 @app.route("/health")
 def healthy():
     return ''
+
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():
@@ -72,8 +79,9 @@ def login():
             return "Login Successful", 200
         else:
             return error, 418
-    
+
     return render_template("login.html")
+
 
 @app.route('/register', methods=('GET', 'POST'))
 def register():
