@@ -4,12 +4,12 @@ on:
     branches:
       - main
     paths-ignore:
-      - '/migrations/**'
+      - migrations/**
   pull_request:
     branches:
       - main
     paths-ignore:
-      - '/migrations/**'
+      - migrations/**
 jobs:
   run-linters:
     name: Run linters
@@ -34,3 +34,4 @@ jobs:
         with:
           black: true
           flake8: true
+          auto_fix: true

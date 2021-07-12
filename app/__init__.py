@@ -14,7 +14,8 @@ app.config[
     passwd=os.getenv("POSTGRES_PASSWORD"),
     host=os.getenv("POSTGRES_HOST"),
     port=5432,
-    table=os.getenv("POSTGRES_DB"))
+    table=os.getenv("POSTGRES_DB"),
+)
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
@@ -38,26 +39,22 @@ class UserModel(db.Model):
 
 @app.route("/")
 def index():
-    return render_template("index.html", title="MLH Fellow",
-                           url=os.getenv("URL"))
+    return render_template("index.html", title="MLH Fellow", url=os.getenv("URL"))
 
 
 @app.route("/projects")
 def carousel():
-    return render_template("carousel.html", title="works",
-                           url=os.getenv("URL"))
+    return render_template("carousel.html", title="works", url=os.getenv("URL"))
 
 
 @app.route("/about")
 def about_me():
-    return render_template("about_me.html", title="about_me",
-                           url=os.getenv("URL"))
+    return render_template("about_me.html", title="about_me", url=os.getenv("URL"))
 
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html", title="Contact",
-                           url=os.getenv("URL"))
+    return render_template("contact.html", title="Contact", url=os.getenv("URL"))
 
 
 @app.route("/health")
