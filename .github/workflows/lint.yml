@@ -3,9 +3,13 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'migrations/**'
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - 'migrations/**'
 jobs:
   run-linters:
     name: Run linters
