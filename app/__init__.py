@@ -39,17 +39,17 @@ class UserModel(db.Model):
 
 @app.route("/")
 def index():
-    return render_template("index.html", title="MLH Fellow", url=os.getenv("URL"))
+    return render_template("index.html", title="Linh Truong", url=os.getenv("URL"))
 
 
 @app.route("/projects")
 def carousel():
-    return render_template("carousel.html", title="works", url=os.getenv("URL"))
+    return render_template("carousel.html", title="Works", url=os.getenv("URL"))
 
 
 @app.route("/about")
 def about_me():
-    return render_template("about_me.html", title="about_me", url=os.getenv("URL"))
+    return render_template("about_me.html", title="About", url=os.getenv("URL"))
 
 
 @app.route("/contact")
