@@ -30,3 +30,11 @@ jobs:
 
       - name: Deploy site
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && git fetch && git reset --hard origin/main && docker-compose up -d --build'
+
+  status-check:
+    name: "Check container status"
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print status
+        run: docker-compose ps
