@@ -38,7 +38,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Verify deployment
-        run: bash prod-test.sh
+        run: sleep 5 && bash prod-test.sh
 
-      - name: Discord webhook notification
+      - name: Discord success notification
         run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful"
+
+      - name: Discord failure notification
+        if: ${{ failure() }}
+        run: curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚨 Deployment Failed"
