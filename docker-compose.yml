@@ -3,6 +3,8 @@ services:
   web:
     container_name: web
     build: .
+    ports:
+      - "8080:80"
     restart: always
     env_file:
       - .flaskenv
@@ -17,6 +19,8 @@ services:
     restart: always
     env_file:
       - .flaskenv
+    volumes:
+      - mydatabase:/var/lib/postgresql/data
 
   nginx:
     container_name: nginx
@@ -46,4 +50,5 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
 
 volumes:
+  mydatabase:
   nginx_secrets:
