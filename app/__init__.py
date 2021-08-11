@@ -59,7 +59,9 @@ def contact():
 
 @app.route("/health")
 def healthy():
-    return ""
+    user = UserModel.query.filter_by(username="f")
+    has_user = "yes" if user is not None else "no"
+    return f"Has User: {has_user}"
 
 
 @app.route("/login", methods=("GET", "POST"))
